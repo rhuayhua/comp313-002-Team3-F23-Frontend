@@ -1,5 +1,6 @@
 import streamlit as st
 import requests
+import os
 import time
 from streamlit_extras.tags import tagger_component
 from PIL import Image
@@ -16,7 +17,8 @@ st.image(image)
 left_column, right_column = st.columns(2)
 
 # API url
-api = "http://172.22.224.1:8910/regex"
+url = os.environ['BACKEND_HOST']
+api = "http://" + url + ":8910/regex"
 
 with left_column:
     st.header('More than an AI keyword extraction.')
