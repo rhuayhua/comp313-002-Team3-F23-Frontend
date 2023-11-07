@@ -3,6 +3,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 ADD banner.jpg banner.jpg
+ADD picture.jpg picture.jpg  
 ADD jpas.py jpas.py
 ADD requirements.txt requirements.txt 
 
